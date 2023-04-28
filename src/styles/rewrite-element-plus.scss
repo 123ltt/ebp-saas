@@ -1,0 +1,22 @@
+// 重写组件样式
+.el-dropdown-menu--small .el-dropdown-menu__item {
+  font-size: var(--el-font-size-base);
+}
+
+// .el-input {
+  // --el-input-icon-color: #999;
+  // --el-font-size-base: 14px;
+
+  // .el-input__prefix {
+  //   left: 3px;
+  // }
+// }
+
+.el-icon, .i-icon {
+  font-size: 14px;
+}
+
+.el-icon > .i-icon {
+  display: inherit;
+  height: auto;
+}

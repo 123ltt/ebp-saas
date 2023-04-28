@@ -1,0 +1,25 @@
+{
+  "siteName": "供应链系统",
+  "ui": {
+    "tip": "提示",
+    "confirm": "确认",
+    "cancel": "取消",
+    "signUp": "去登陆",
+    "loadingApp": "加载应用中...",
+    "errorCode": "错误代码 ${code}"
+  },
+  "tabs": {
+    "home": "首页"
+  },
+  "home": {
+    "welcome": {
+      "title": "欢迎",
+      "welcomeTo": "{siteName} 欢迎您！"
+    }
+  },
+  "syncLogin": {
+    "loggedOut": "您已退出登录",
+    "changedAccount": "您已登录其他账号，请刷新页面",
+    "loginTip": "登录提示"
+  }
+}

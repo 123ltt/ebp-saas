@@ -1,0 +1,32 @@
+{
+  "name": "@zh/request",
+  "version": "1.0.0",
+  "description": "axios的二次封装",
+  "main": "src/index.ts",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "author": "caohuichang",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/nprogress": "^0.2.0",
+    "@types/throttle-debounce": "^2.1.0",
+    "puppeteer": "^13.5.1",
+    "serxy": "^1.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "js-base64": "^3.7.2",
+    "nprogress": "^0.2.0",
+    "throttle-debounce": "^3.0.1",
+    "ts-md5": "^1.2.9"
+  },
+  "files": [
+    "src"
+  ]
+}

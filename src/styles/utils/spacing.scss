@@ -1,0 +1,48 @@
+// spacing
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: 0.25,
+  2: 0.5,
+  3: 1,
+  4: 1.5,
+  5: 3,
+) !default;
+
+@each $key, $value in $spacers {
+  $val: $spacer * $value !important;
+  .m-#{$key} {
+    margin: $val;
+  }
+  .p-#{$key} {
+    padding: $val;
+  }
+}
+
+@each $key, $value in $spacers {
+  $val: $spacer * $value !important;
+
+  @each $a, $b, $s in (left, right, x), (top, bottom, y) {
+    .m#{$s}-#{$key} {
+      margin-#{$a}: $val;
+      margin-#{$b}: $val;
+    }
+    .p#{$s}-#{$key} {
+      padding-#{$a}: $val;
+      padding-#{$b}: $val;
+    }
+  }
+}
+
+@each $key, $value in $spacers {
+  $val: $spacer * $value !important;
+
+  @each $d, $s in (left, s), (right, e), (top, t), (bottom, b) {
+    .m#{$s}-#{$key} {
+      margin-#{$d}: $val;
+    }
+    .p#{$s}-#{$key} {
+      padding-#{$d}: $val;
+    }
+  }
+}

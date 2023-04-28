@@ -1,0 +1,66 @@
+// 字体大小
+$font-sizes: (
+  1: 2.5,
+  2: 2,
+  3: 1.75,
+  4: 1.5,
+  5: 1.25,
+  6: 1,
+  base: 1,
+) !default;
+
+@each $key, $value in $font-sizes {
+  .fs-#{$key} {
+    font-size: calc(var(--el-font-size-base) * #{$value}) !important;
+  }
+}
+
+// 字体粗细
+$font-weights: (
+  lighter: lighter,
+  light: 300,
+  normal: 400,
+  bold: 700,
+  bolder: bolder,
+) !default;
+
+@each $key, $value in $font-weights {
+  .fw-#{$key} {
+    font-weight: $value !important;
+  }
+}
+
+// 文本装饰
+@each $val in underline, line-through, none {
+  .text-decoration-#{$val} {
+    text-decoration: $val !important;
+  }
+}
+
+// 文本对齐
+@each $value, $selector in (left, start), (center), (right, end) {
+  .text-#{$selector or $value} {
+    text-align: $value;
+  }
+}
+
+// 文本 行 相关的处理
+.text-wrap {
+  white-space: normal !important;
+}
+.text-nowrap {
+  white-space: nowrap !important;
+}
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-muted {
+  color: var(--el-text-color-secondary) !important;
+}

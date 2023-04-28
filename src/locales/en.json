@@ -1,0 +1,25 @@
+{
+  "siteName": "Supply Chain System",
+  "ui": {
+    "tip": "Tips",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "goToLogin": "Sign up",
+    "loadingApp": "Loading app...",
+    "errorCode": "Error code ${code}"
+  },
+  "tabs": {
+    "home": "Home"
+  },
+  "home": {
+    "welcome": {
+      "title": "Welcome",
+      "welcomeTo": "Welcome to {siteName} !"
+    }
+  },
+  "syncLogin": {
+    "loggedOut": "You are logged out",
+    "changedAccount": "You are already logged in to another account, please refresh the page",
+    "loginTip": "Login tip"
+  }
+}

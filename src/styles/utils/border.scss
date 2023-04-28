@@ -1,0 +1,38 @@
+$border-width: 1px;
+$border-widths: (
+  0: 0px,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+) !default;
+
+$dirs: (
+  top: top,
+  right: end,
+  bottom: bottom,
+  left: start,
+) !default;
+
+@each $key, $val in $border-widths {
+  .border-#{$key} {
+    border: $val var(--el-border-color-light) solid !important;
+  }
+}
+
+@each $key, $val in $border-widths {
+  .rounded-#{$key} {
+    border-radius: $val !important;
+  }
+}
+
+
+@each $key, $val in $border-widths {
+  @each $v, $k in $dirs {
+    .border-#{$k}-#{$key} {
+      border: 0px solid var(--el-border-color-light);
+      border-#{$v}-width: $val !important;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+$colors: (
+  white,
+  black,
+  primary,
+  primary-light-1,
+  primary-light-2,
+  primary-light-3,
+  primary-light-4,
+  primary-light-5,
+  primary-light-6,
+  primary-light-7,
+  primary-light-8,
+  primary-light-9,
+  success,
+  success-light,
+  success-lighter,
+  warning,
+  warning-light,
+  warning-lighter,
+  danger,
+  danger-light,
+  danger-lighter,
+  error,
+  error-light,
+  error-lighter,
+  info,
+  info-light,
+  info-lighter
+) !default;
+
+// 文本颜色 和 背景色
+@each $key in $colors {
+  .text-#{"" + $key} {
+    color: var(--el-color-#{$key}) !important;
+  }
+
+  .bg-#{"" + $key} {
+    background-color: var(--el-color-#{$key}) !important;
+  }
+}

@@ -1,0 +1,44 @@
+$scrollbarTrackBg: rgba(244, 244, 244, 0.1);
+$scrollbarThumbBg: rgba(244, 244, 244, 0.2);
+
+// 定义滚动条样式
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+// 定义滚动条轨道 内阴影+圆角
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px $scrollbarTrackBg;
+  border-radius: 10px;
+  background-color: $scrollbarTrackBg;
+}
+
+// 定义滑块 内阴影+圆角
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0px $scrollbarTrackBg;
+  background-color: $scrollbarThumbBg;
+  &:hover {
+    background-color: rgba(244, 244, 244, 0.3) !important;
+  }
+}
+
+// 控制滚动条的显示隐藏（鼠标在滚动区域显示滚动条，不在则隐藏）
+.scrollbar-auto {
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  &:hover {
+    &::-webkit-scrollbar-track {
+      background-color: $scrollbarTrackBg;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $scrollbarThumbBg;
+    }
+  }
+}

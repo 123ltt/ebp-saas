@@ -1,0 +1,24 @@
+$sizes: (
+  100,
+  75,
+  50,
+  25,
+  0
+) !default;
+
+@each $s in $sizes {
+  .w-#{$s} {
+    width: #{$s} + '%' !important;
+  }
+  .h-#{$s} {
+    height: #{$s} + '%' !important;
+  }
+}
+
+.vh-100 {
+  height: 100vh !important;
+}
+
+.vw-100 {
+  width: 100vw !important;
+}

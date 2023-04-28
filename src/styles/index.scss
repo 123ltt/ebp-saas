@@ -1,0 +1,39 @@
+:root {
+  --el-font-size-base: 12px;
+  // 控制菜单栏（单项） 和 logo 的高度
+  --el-menu-height: 50px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: var(--el-font-size-base);
+  font-family: -apple-system, BlinkMacSystemFont, 'Microsoft Yahei', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@import "./utils/spacing.scss";
+// @import "./utils/scroll.scss"; // 直接用 el-scroller 组件替代
+@import "./utils/flex.scss";
+@import "./utils/border.scss";
+@import "./utils/animation.scss";
+@import "./utils/text.scss";
+@import "./utils/color.scss";
+@import "./utils/size.scss";
+@import "./utils/display.scss";
+@import "./utils/position.scss";
+
+// overflow
+@each $item in auto, hidden {
+  .overflow-#{$item} {
+    overflow: $item;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@import './rewrite-element-plus.scss';
+@import './layout.scss';

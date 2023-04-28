@@ -1,0 +1,31 @@
+.d-flex {
+  display: flex;
+}
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+@each $item in center, end, stretch {
+  .align-items-#{$item} {
+    align-items: $item;
+  }
+}
+
+@each $value, $selector in (center), (space-between, between), (end) {
+  .justify-content-#{$selector or $value} {
+    justify-content: $value;
+  }
+}
+
+@each $type in grow, shrink {
+  @each $v in 0, 1 {
+    .flex-#{$type}-#{$v} {
+      flex-#{$type}: $v;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+$values: (
+  none,
+  block,
+  inline,
+  inline-block
+);
+
+@each $v in $values {
+  .d-#{$v} {
+    display: $v;
+  }
+}

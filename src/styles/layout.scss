@@ -1,0 +1,14 @@
+// 水平菜单布局
+.layout-horizontal {
+  // 水平菜单 右侧按钮
+  .el-button.el-button-transparent {
+    --el-button-bg-color: transparent !important;
+    --el-button-text-color: var(--menu-text-color);
+    --el-button-hover-text-color: var(--menu-text-color);
+    --el-button-hover-bg-color: var(--menu-hover-bg-color);
+  }
+
+  .horizontal-right {
+    background-color: var(--menu-bg-color);
+  }
+}
